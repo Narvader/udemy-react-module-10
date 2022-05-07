@@ -69,12 +69,12 @@ const NewUser = (props) => {
                 <form onSubmit={handleSubmit}>
                     <div className='new-user__controls'>
                         <div className='new-user__control'>
-                            <label>Username</label>
-                            <input type='text' value={userInputs.enteredUserName} onChange={usernameChangeHandler} />
+                            <label htmlFor='username'>Username</label>
+                            <input type='text' id='username' value={userInputs.enteredUserName} onChange={usernameChangeHandler} />
                         </div>
                         <div className='new-user__control'>
-                            <label>Age (Years)</label>
-                            <input type='text' maxlength="3" value={userInputs.enteredUserAge} onChange={ageChangeHandler} />
+                            <label htmlFor='age'>Age (Years)</label>
+                            <input type='text' id='age' maxlength="3" value={userInputs.enteredUserAge} onChange={ageChangeHandler} />
                         </div>
                     </div>
                     <div className='new-user__actions'>
