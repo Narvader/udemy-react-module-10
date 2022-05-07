@@ -1,0 +1,47 @@
+.new-user__control {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.new-user__control label {
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.new-user__control input {
+    border: 1px solid #d3d3d3;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.cta-btn {
+    background-color: #000080;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 4px 16px;
+    cursor: pointer;
+}
+
+.modal-invalid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 300px;
+    height: 50px;
+    background-color: white;
+    transition: opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal-invalid.visible {
+    visibility: visible;
+    opacity: 1;
+}
