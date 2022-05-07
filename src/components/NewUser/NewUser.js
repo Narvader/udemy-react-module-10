@@ -9,12 +9,10 @@ const NewUser = (props) => {
         enteredUserName: '',
         enteredUserAge: ''
     });
-
     const [invalidInput, setInvalidInput] = useState();
     const [modalVisible, setModalVisible] = useState(false);
 
     const usernameChangeHandler = (e) => {
-
         setUserInputs({
           ...userInputs,
           enteredUserName: e.target.value
@@ -39,6 +37,10 @@ const NewUser = (props) => {
         };
 
         handleInfo(newUser);
+        setUserInputs({
+            enteredUserName: '',
+            enteredUserAge: ''
+        });
     }
 
     const handleInfo = (newuser) => {
@@ -74,7 +76,7 @@ const NewUser = (props) => {
                         </div>
                         <div className='new-user__control'>
                             <label htmlFor='age'>Age (Years)</label>
-                            <input type='text' id='age' maxlength="3" value={userInputs.enteredUserAge} onChange={ageChangeHandler} />
+                            <input type='number' id='age' maxlength="3" value={userInputs.enteredUserAge} onChange={ageChangeHandler} />
                         </div>
                     </div>
                     <div className='new-user__actions'>
