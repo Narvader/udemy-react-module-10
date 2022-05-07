@@ -87,7 +87,7 @@ const NewUser = (props) => {
                     <div className="modal__overlay" onClick={handleClick}></div>
                     <Modal inputStatus={invalidInput}>
                         <div className="modal__btn">
-                            <button className='cta-btn' onClick={handleClick}>Okay</button>
+                            <button type="button" className='cta-btn' onClick={handleClick}>Okay</button>
                         </div>
                     </Modal>
                 </div>
