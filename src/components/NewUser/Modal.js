@@ -12,10 +12,14 @@ const Modal = (props) => {
 
     return (
         <div>
+            <div className="modal__overlay" onClick={props.onConfirm}></div>
             <Card className="modal">
                 <div className="modal__header">Invalid input</div>
                 <p className="modal__text">{content[props.inputStatus]}</p>
                 {props.children}
+                <div className="modal__btn">
+                    <button type="button" className='cta-btn' onClick={props.onConfirm}>Okay</button>
+                </div>
             </Card>
         </div>
     )

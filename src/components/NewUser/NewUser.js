@@ -62,11 +62,10 @@ const NewUser = (props) => {
 
     const handleClick = () => {
         setModalVisible(false);
-        console.log(modalVisible);
     }
 
     return (
-        <div>
+        <>
             <Card className="userForm">
                 <form onSubmit={handleSubmit}>
                     <div className='new-user__controls'>
@@ -76,7 +75,7 @@ const NewUser = (props) => {
                         </div>
                         <div className='new-user__control'>
                             <label htmlFor='age'>Age (Years)</label>
-                            <input type='number' id='age' maxlength="3" value={userInputs.enteredUserAge} onChange={ageChangeHandler} />
+                            <input type='number' id='age' maxLength="3" value={userInputs.enteredUserAge} onChange={ageChangeHandler} />
                         </div>
                     </div>
                     <div className='new-user__actions'>
@@ -85,16 +84,11 @@ const NewUser = (props) => {
                 </form>
             </Card>
             {modalVisible && 
-                <div>
-                    <div className="modal__overlay" onClick={handleClick}></div>
-                    <Modal inputStatus={invalidInput}>
-                        <div className="modal__btn">
-                            <button type="button" className='cta-btn' onClick={handleClick}>Okay</button>
-                        </div>
-                    </Modal>
-                </div>
+                <>
+                    <Modal inputStatus={invalidInput} onConfirm={handleClick} />
+                </>
             }
-        </div>
+        </>
     )
 };
 
