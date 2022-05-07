@@ -8,7 +8,7 @@ function App() {
 
   const addUserHandler = (user) => {
     setUsers(prevState => {
-      return [user, ...prevState];
+      return [...prevState, user];
     });
   }
 

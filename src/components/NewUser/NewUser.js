@@ -33,7 +33,7 @@ const NewUser = (props) => {
         const newUser = {
             name: userInputs.enteredUserName,
             age: userInputs.enteredUserAge,
-            id: (Math.random() * 100) + 1
+            id: ((Math.random() * 100) + 1).toString()
         };
 
         handleInfo(newUser);
