@@ -37,10 +37,7 @@ const NewUser = (props) => {
         };
 
         handleInfo(newUser);
-        setUserInputs({
-            enteredUserName: '',
-            enteredUserAge: ''
-        });
+        
     }
 
     const handleInfo = (newuser) => {
@@ -57,6 +54,10 @@ const NewUser = (props) => {
             setInvalidInput();
             setModalVisible(false);
             props.onAddUser(newuser);
+            setUserInputs({
+                enteredUserName: '',
+                enteredUserAge: ''
+            });
         }
     };
 
